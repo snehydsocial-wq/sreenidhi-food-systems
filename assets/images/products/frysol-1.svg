@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">FRYSOL® IMAGE COMING SOON</title><desc id="desc">Reserved media position for FRYSOL®.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061b3a"/><stop offset="1" stop-color="#12335d"/></linearGradient><pattern id="p" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity=".055"/></pattern></defs>
+<rect width="1200" height="900" rx="48" fill="url(#g)"/><rect width="1200" height="900" rx="48" fill="url(#p)"/>
+<circle cx="970" cy="170" r="180" fill="#7bcb00" fill-opacity=".12"/><circle cx="970" cy="170" r="78" fill="#7bcb00" fill-opacity=".16"/>
+<path d="M168 266h320M168 316h230" stroke="#7bcb00" stroke-width="10" stroke-linecap="round"/>
+<text x="168" y="500" fill="#fffef8" font-family="Outfit, sans-serif" font-size="66" font-weight="600">FRYSOL®</text>
+<text x="168" y="574" fill="#d7dfd6" font-family="Outfit, sans-serif" font-size="28">IMAGE COMING SOON · PRODUCT MEDIA</text>
+<text x="168" y="705" fill="#7bcb00" font-family="Outfit, sans-serif" font-size="24">SREENIDHI FOOD SYSTEMS</text>
+</svg>
