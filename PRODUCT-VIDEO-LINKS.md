@@ -25,10 +25,13 @@ To change a product video after deployment, open `assets/js/product-videos.js`, 
 | Perfect Vanilla — Sweet & Creamy | `perfect-vanilla-sweet-and-creamy` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® 06 | `xtendra-06` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® 08 | `xtendra-08` | `https://youtu.be/fBYE8AnKVXc` |
+| Xtendra® Bake Magic | `xtendra-bake-magic` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® Bake Magic Plus | `xtendra-bake-magic-plus` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® Bakers Bread | `xtendra-bakers-bread` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® CPro | `xtendra-cpro` | `https://youtu.be/fBYE8AnKVXc` |
+| Xtendra® Dezarto | `xtendra-dezarto` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® Dezarto Plus | `xtendra-dezarto-plus` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® Liquid Food Preservative | `xtendra-liquid-food-preservative` | `https://youtu.be/fBYE8AnKVXc` |
+| Xtendra® Mithai Magic | `xtendra-mithai-magic` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® Mithai Magic Plus | `xtendra-mithai-magic-plus` | `https://youtu.be/fBYE8AnKVXc` |
 | Xtendra® SPro | `xtendra-spro` | `https://youtu.be/fBYE8AnKVXc` |

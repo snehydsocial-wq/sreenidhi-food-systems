@@ -24,5 +24,8 @@ window.SREENIDHI_PRODUCT_VIDEOS = {
   "xtendra-dezarto-plus": "https://youtu.be/fBYE8AnKVXc",
   "xtendra-liquid-food-preservative": "https://youtu.be/fBYE8AnKVXc",
   "xtendra-mithai-magic-plus": "https://youtu.be/fBYE8AnKVXc",
-  "xtendra-spro": "https://youtu.be/fBYE8AnKVXc"
+  "xtendra-spro": "https://youtu.be/fBYE8AnKVXc",
+  "xtendra-mithai-magic": "https://youtu.be/fBYE8AnKVXc",
+  "xtendra-bake-magic": "https://youtu.be/fBYE8AnKVXc",
+  "xtendra-dezarto": "https://youtu.be/fBYE8AnKVXc"
 };

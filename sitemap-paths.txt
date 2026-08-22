@@ -47,3 +47,6 @@ products/xtendra-spro.html
 insights/understanding-food-shelf-life.html
 insights/oxidation-rancidity-control.html
 insights/frying-oil-management.html
+products/xtendra-mithai-magic.html
+products/xtendra-bake-magic.html
+products/xtendra-dezarto.html

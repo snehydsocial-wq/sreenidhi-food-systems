@@ -1,9 +1,9 @@
 {
-  "html_routes": 50,
-  "products": 26,
+  "html_routes": 52,
+  "products": 29,
   "supplied_product_images": 80,
   "products_with_supplied_images": 23,
-  "product_youtube_links": 26,
+  "product_youtube_links": 29,
   "segments": 6,
   "solutions": 8,
   "insights": 3,
@@ -56,6 +56,9 @@
     "products/xtendra-spro.html",
     "insights/understanding-food-shelf-life.html",
     "insights/oxidation-rancidity-control.html",
-    "insights/frying-oil-management.html"
+    "insights/frying-oil-management.html",
+    "products/xtendra-mithai-magic.html",
+    "products/xtendra-bake-magic.html",
+    "products/xtendra-dezarto.html"
   ]
 }
