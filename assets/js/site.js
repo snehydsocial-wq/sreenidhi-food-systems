@@ -16,16 +16,24 @@
     const main=gallery.querySelector('[data-gallery-main]');
     const buttons=[...gallery.querySelectorAll('.product-gallery-thumb')];
     if(!main||!buttons.length)return;
+    const imageButtons=buttons.filter(button=>button.dataset.galleryType!=='youtube');
     let activeIndex=Math.max(0,buttons.findIndex(button=>button.classList.contains('active')));
+    let lightboxImageIndex=0;
     const previous=document.createElement('button');previous.type='button';previous.className='product-gallery-nav product-gallery-prev';previous.setAttribute('aria-label','Show previous product media');previous.textContent='←';
     const next=document.createElement('button');next.type='button';next.className='product-gallery-nav product-gallery-next';next.setAttribute('aria-label','Show next product media');next.textContent='→';
     const lightbox=document.createElement('div');lightbox.className='product-lightbox';lightbox.hidden=true;lightbox.setAttribute('role','dialog');lightbox.setAttribute('aria-modal','true');lightbox.setAttribute('aria-label','Expanded product image');
     const lightboxClose=document.createElement('button');lightboxClose.type='button';lightboxClose.className='product-lightbox-close';lightboxClose.setAttribute('aria-label','Close expanded image');lightboxClose.textContent='×';
-    const lightboxImage=document.createElement('img');const initialImage=main.querySelector(':scope > img');if(initialImage){lightboxImage.src=initialImage.currentSrc||initialImage.src;lightboxImage.alt=initialImage.alt||'Expanded product image';}lightbox.append(lightboxClose,lightboxImage);document.body.append(lightbox);
+    const lightboxPrevious=document.createElement('button');lightboxPrevious.type='button';lightboxPrevious.className='product-lightbox-nav product-lightbox-prev';lightboxPrevious.setAttribute('aria-label','Show previous expanded product image');lightboxPrevious.textContent='←';
+    const lightboxNext=document.createElement('button');lightboxNext.type='button';lightboxNext.className='product-lightbox-nav product-lightbox-next';lightboxNext.setAttribute('aria-label','Show next expanded product image');lightboxNext.textContent='→';
+    const lightboxImage=document.createElement('img');const initialImage=main.querySelector(':scope > img');if(initialImage){lightboxImage.src=initialImage.currentSrc||initialImage.src;lightboxImage.alt=initialImage.alt||'Expanded product image';}lightbox.append(lightboxClose,lightboxPrevious,lightboxImage,lightboxNext);document.body.append(lightbox);
     const closeLightbox=()=>{if(lightbox.hidden)return;lightbox.hidden=true;body.style.overflow='';main.focus({preventScroll:true});};
-    const openLightbox=image=>{lightboxImage.src=image.currentSrc||image.src;lightboxImage.alt=image.alt||'Expanded product image';lightbox.hidden=false;body.style.overflow='hidden';lightboxClose.focus();};
+    const updateLightboxNav=()=>{const hidden=imageButtons.length<2;lightboxPrevious.hidden=hidden;lightboxNext.hidden=hidden;};
+    const openLightbox=image=>{const activeButton=buttons[activeIndex];const imageIndex=imageButtons.indexOf(activeButton);lightboxImageIndex=imageIndex>=0?imageIndex:0;lightboxImage.src=image.currentSrc||image.src;lightboxImage.alt=image.alt||'Expanded product image';updateLightboxNav();lightbox.hidden=false;body.style.overflow='hidden';lightboxClose.focus();};
+    const moveLightbox=direction=>{if(imageButtons.length<2)return;lightboxImageIndex=(lightboxImageIndex+direction+imageButtons.length)%imageButtons.length;const button=imageButtons[lightboxImageIndex];selectMedia(button);lightboxImage.src=button.dataset.gallerySrc;lightboxImage.alt=button.dataset.galleryAlt||'Expanded product image';};
     lightboxClose.addEventListener('click',closeLightbox);lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox();});
-    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeLightbox();});
+    lightboxPrevious.addEventListener('click',event=>{event.stopPropagation();moveLightbox(-1);});
+    lightboxNext.addEventListener('click',event=>{event.stopPropagation();moveLightbox(1);});
+    document.addEventListener('keydown',event=>{if(lightbox.hidden)return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft'){event.preventDefault();moveLightbox(-1);}if(event.key==='ArrowRight'){event.preventDefault();moveLightbox(1);}});
     const addControls=()=>{if(buttons.length>1)main.append(previous,next);const image=main.querySelector(':scope > img');main.classList.toggle('is-image',Boolean(image));main.tabIndex=image?0:-1;main.setAttribute('aria-label',image?'Open larger product image':'Product video');};
     const selectMedia=button=>{
       activeIndex=Math.max(0,buttons.indexOf(button));
