@@ -11,3 +11,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sreenidhifoodsystems.com/sitemap.xml
+Sitemap: https://sreenidhifoodsystems.com/image-sitemap.xml

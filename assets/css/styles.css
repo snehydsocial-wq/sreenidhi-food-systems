@@ -69,3 +69,8 @@ html,body,.page-main{width:100%;max-width:100%;overflow-x:hidden}.site-header,.n
 /* Text-only segments landing hero; the cards below carry the category imagery. */
 .listing-hero--text-only{min-height:auto;padding-bottom:100px}
 @media(max-width:720px){.listing-hero--text-only{min-height:auto;padding-bottom:70px}}
+
+
+/* ranking phase 1 entity context */
+.entity-context,.product-name-reference-link{margin-top:14px;color:var(--steel);font-size:.96rem;line-height:1.65}
+.product-name-reference-link a{color:var(--green-deep);font-weight:700;text-decoration:underline;text-underline-offset:3px}
